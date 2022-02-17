@@ -1,0 +1,36 @@
+.sidepanel {
+    opacity: 0;
+    transition: 3s opacity ease-in-out;
+    position: fixed;
+    top: 30vh;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 360px;
+    z-index: 3;
+    &__link {
+        svg {
+            path {
+                fill: $blue-color;
+            }
+        }
+    }
+    &__divider {
+        width: 2px;
+        height: 70px;
+        background-color: $blue-color;
+    }
+    &__text {
+    color: $blue-color;
+    font-size: 16px;
+       height: 150px;
+       width: 25px;
+       span {
+           transform: rotate(-90deg) translate(-14%,-268%);
+           display: block;
+           width: 150px;
+       } 
+    }
+}

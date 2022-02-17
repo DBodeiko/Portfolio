@@ -1,0 +1,95 @@
+.skills {
+    min-height: 100vh;
+    padding: 60px 0 60px 0;
+    &__subtitle {
+        color: $darkblue-color;
+        text-align: center;
+        position: relative;
+        @include before_par;
+        &:before {
+            top: -6px;
+            left: 47.7%;    
+        }
+    }
+    &__title {
+        text-align: center;
+        color: $darkblue-color;
+    }
+    
+    &__divider {
+        width: 60px;
+        height: 4px;
+        border-radius: 3px;
+        background-color: $blue-color;
+        margin: 25px auto 0 auto;
+    }
+    
+    &__instruments {
+        padding-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(270px, auto));
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        gap: 13px;
+    }
+    &__instrument {
+        display: block;
+        background-color: $grey-color;
+        padding: 0 30px 25px 30px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.45), 0 10px 10px rgba(0,0,0,0.42);
+        transition: all .5s;
+        &:hover {
+            transform: scale(1.103);
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+            height: 115px;
+            
+        }
+        &-title {
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        &-descr {
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+    }
+    &__percent {
+        padding: 120px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 70px);
+        column-gap: 45px;
+        rotate: 30px;
+        &-text {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 27px;
+        }
+        &-title {
+            font-size: 14px;
+            font-weight: 700;
+        }
+        &-value {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        &-progressbar {
+            width: 350px;
+            height: 14px;
+            background-color: $grey-color;
+            border-radius: 4px;
+        }
+        &-frontbar {
+            height: 14px;
+            background: $darkblue-color;
+            border-radius: 4px;
+            
+            
+        }
+
+    }
+}

@@ -1,0 +1,72 @@
+.btn {
+    padding-top: 10px;
+    height: 45px;
+    width: 125px;
+    background-color: transparent;
+	position: relative;
+	border: none;
+	font-size: 18px;
+	transition: color 0.5s, transform 0.2s, background-color 0.2s;
+	outline: none;
+	border-radius: 13px;
+	
+	
+	border: 3px solid transparent;
+    color: $grey-color;
+	border: none;
+	overflow: hidden;
+	box-shadow: none;
+	&:active {
+		transform: translateY(3px);
+	}
+	&::after {
+		border-radius: 13px;
+        box-sizing: border-box;
+	}
+	&::before {
+		border-radius: 13px;
+        box-sizing: border-box;
+	}
+    &:hover {
+		color: $grey-color;
+        
+		&::before {
+			opacity: 0;
+            box-sizing: border-box;
+		}
+		&::after {
+			opacity: 1;
+			transform-origin: 100px 100px;
+			transform: scale(1) translate(-35px, -70px);
+            box-sizing: border-box;
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 2px solid $grey-color;
+		transition: opacity 0.3s, border 0.3s;
+        box-sizing: border-box;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 200px;
+		height: 200px;
+		background-color: $blue-color;
+		border-color: transparent;
+		border-radius: 50%;
+		transform: translate(-35px, -70px) scale(0.1);
+		opacity: 0;
+		z-index: -1;
+		transition: transform 0.3s, opacity 0.3s, background-color 0.5s;
+        box-sizing: border-box;
+	}
+}
+

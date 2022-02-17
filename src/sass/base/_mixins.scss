@@ -1,0 +1,16 @@
+@mixin before_par {
+    &:before {
+        content: '';
+        top: -25%;
+        left: 0;
+        z-index: -1;
+        position: absolute;
+        width: 54px;
+        height: 36px;
+        transform: skew(-20deg); 
+        -webkit-transform: skew(-20deg);
+           -moz-transform: skew(-20deg);
+             -o-transform: skew(-20deg);
+        background: $blue-color;
+    }
+}

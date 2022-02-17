@@ -1,0 +1,22 @@
+.pageup {
+    color: $grey-color;
+    display: none;
+    z-index: 99;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    @include before_par;
+    &:before {
+        left: -13px;
+    }
+    &:active {
+        transform: translateY(3px);
+    }
+    a {
+        color: $grey-color;
+        text-decoration: none;  
+    }
+
+
+
+}
